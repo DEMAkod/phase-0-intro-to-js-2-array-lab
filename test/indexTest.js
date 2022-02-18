@@ -20,6 +20,12 @@ describe('index.js', function () {
       });
     });
 
+    beforeEach(function () {
+      cats.length = 0;
+    
+      cats.push("Milo", "Otis", "Garfield", "Ralph");
+    });
+
     describe('destructivelyPrependCat(name)', function () {
       it('prepends a cat to the beginning of the cats array', function () {
         destructivelyPrependCat("Bob");
